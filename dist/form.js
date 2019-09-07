@@ -113,7 +113,6 @@
     $submit.on('touchend', function () {
         if (formData.username == "" || formData.college == "" || formData.dormitory == "" || formData.sex == "" || formData.number == "" || formData.WeChat == "" || formData.direction == "" || formData.QQ == "" || formData.introduction == "") {
             alert("请完整填写表单");
-            console.log(1)
         } else if (formData.direction.trim() == formData.others.trim()) {
             alert("第一意向部门和其他意向部门不能重复");
         } else if (!checkNumber()) {
