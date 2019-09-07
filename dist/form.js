@@ -53,6 +53,9 @@
             case "others":
                 formData.others = value;
                 break;
+            case "sex":
+                formData.sex = value;
+                break;
             default:
                 break;
         }
@@ -63,7 +66,7 @@
         formData.introduction = value;
     });
     // 给性别单选按钮绑定单击响应函数
-    $radio.on('click', function (ev) {
+    $radio.on('touchend', function (ev) {
         var $sex = $(ev.target).parents('.group-item');
         var sex = $sex.attr('option');
         $sex.children()[0].style.background = '#07190e80';
@@ -72,14 +75,13 @@
     });
 
     // 给单选框按钮绑定点击函数
-    $mask.on('click', function (ev) {
+    $mask.on('touchend', function (ev) {
         $formRight.hide();
         $mask.hide(100);
         ev.stopPropagation();
     });
-    $option.on('click', function (ev) {
+    $option.on('touchend', function (ev) {
         var value = $(ev.target).parents('.x-select-item').text();
-
         if (value != "") {
             $(this).addClass('select');
             $(this).siblings().removeClass('select');
@@ -117,7 +119,7 @@
         $formRight.show();
         $mask.show(100);
     });
-    $submit.on('click', function () {
+    $submit.on('touchend', function () {
         if (formData.username == "" || formData.college == "" || formData.dormitory == "" || formData.sex == "" || formData.number == "" || formData.WeChat == "" || formData.direction == "" || formData.QQ == "" || formData.introduction == "") {
             alert("请完整填写表单");
         } else if (formData.direction.trim() == formData.others.trim()) {
