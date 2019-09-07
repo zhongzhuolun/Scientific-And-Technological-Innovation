@@ -72,6 +72,8 @@
             case "others":
                 formData.others = value;
                 break;
+            case "sex":
+                formData.sex = value;
             default:
                 break;
         }
@@ -82,13 +84,13 @@
         formData.introduction = value;
     })
     // 给性别单选按钮绑定单击响应函数
-    $radio.on('touchend', function (ev) {
-        let $sex = $(ev.target).parents('.group-item');
-        let sex = $sex.attr('option');
-        $sex.children()[0].style.background = '#07190e80';
-        $sex.first().siblings().children()[0].style.background = '#fff';
-        formData.sex = sex;
-    })
+    // $radio.on('touchend', function (ev) {
+    //     let $sex = $(ev.target).parents('.group-item');
+    //     let sex = $sex.attr('option');
+    //     $sex.children()[0].style.background = '#07190e80';
+    //     $sex.first().siblings().children()[0].style.background = '#fff';
+    //     formData.sex = sex;
+    // })
   
     // 给单选框按钮绑定点击函数
     $mask.on('touchend', function (ev) {
@@ -97,7 +99,8 @@
         ev.stopPropagation();
     })
     $option.on('touchend', function (ev) {
-        let value = $(ev.target).parents('.x-select-item').text();
+        let value = $(ev.target).parents('.x-select-item').text()
+        
         if (value != "") {
             $(this).addClass('select');
             $(this).siblings().removeClass('select');
@@ -109,7 +112,7 @@
             formData.direction = value.trim();
         }
     })
-    $triggerBtn.on('click', function() {
+    $triggerBtn.on('touchend', function() {
         $formRight.show();
         $mask.show(100);
     })
@@ -147,7 +150,6 @@
                     }
                 });
             }
-        console.log(formData)
     })
         /*验证手机号 */
 function checkNumber() {
