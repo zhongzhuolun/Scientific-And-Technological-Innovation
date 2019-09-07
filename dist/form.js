@@ -119,7 +119,7 @@
             alert("手机号格式错误");
         } else {
             $.ajax({
-                type: "get",
+                type: "post",
                 url: "http://39.108.253.120/RegistrationWebsite/applicant.sign",
                 data: formData,
                 success: function success(response) {
