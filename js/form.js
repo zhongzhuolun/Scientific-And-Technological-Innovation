@@ -82,7 +82,7 @@
         formData.introduction = value;
     })
     // 给性别单选按钮绑定单击响应函数
-    $radio.on('click', function (ev) {
+    $radio.on('touchend', function (ev) {
         let $sex = $(ev.target).parents('.group-item');
         let sex = $sex.attr('option');
         $sex.children()[0].style.background = '#07190e80';
@@ -91,12 +91,12 @@
     })
   
     // 给单选框按钮绑定点击函数
-    $mask.on('click', function (ev) {
+    $mask.on('touchend', function (ev) {
         $formRight.hide();
         $mask.hide(100);
         ev.stopPropagation();
     })
-    $option.on('click', function (ev) {
+    $option.on('touchend', function (ev) {
         let value = $(ev.target).parents('.x-select-item').text();
         if (value != "") {
             $(this).addClass('select');
@@ -113,7 +113,7 @@
         $formRight.show();
         $mask.show(100);
     })
-    $submit.on('click', function () {
+    $submit.on('touchend', function () {
         if (formData.username == ""
             ||formData.college == ""
             ||formData.dormitory == ""
