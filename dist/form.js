@@ -65,15 +65,6 @@
         var value = $(this).text();
         formData.introduction = value;
     });
-    // 给性别单选按钮绑定单击响应函数
-    $radio.on('touchend', function (ev) {
-        var $sex = $(ev.target).parents('.group-item');
-        var sex = $sex.attr('option');
-        $sex.children()[0].style.background = '#07190e80';
-        $sex.first().siblings().children()[0].style.background = '#fff';
-        formData.sex = sex;
-    });
-
     // 给单选框按钮绑定点击函数
     $mask.on('touchend', function (ev) {
         $formRight.hide();
@@ -94,9 +85,9 @@
         }
     });
     //取消默认行为
-		document.addEventListener('touchstart',function(event){
-			event.preventDefault();
-		});
+		// document.addEventListener('touchstart',function(event){
+		// 	event.preventDefault();
+		// });
 
 		//解决点透事件
 		!(function(){
@@ -115,19 +106,19 @@
 			styleNode.innerHTML = 'html{font-size: '+ width/16 +'px !important;}';
 			document.head.appendChild(styleNode)
 		})();
-    $triggerBtn.on('click', function () {
+    $triggerBtn.on('touchend', function () {
         $formRight.show();
         $mask.show(100);
     });
     $submit.on('touchend', function () {
         if (formData.username == "" || formData.college == "" || formData.dormitory == "" || formData.sex == "" || formData.number == "" || formData.WeChat == "" || formData.direction == "" || formData.QQ == "" || formData.introduction == "") {
             alert("请完整填写表单");
+            console.log(1)
         } else if (formData.direction.trim() == formData.others.trim()) {
             alert("第一意向部门和其他意向部门不能重复");
         } else if (!checkNumber()) {
             alert("手机号格式错误");
         } else {
-            console.log(1);
             $.ajax({
                 type: "post",
                 url: "http://39.108.253.120/RegistrationWebsite/applicant.sign",
