@@ -98,7 +98,6 @@
     })
     $option.on('click', function (ev) {
         let value = $(ev.target).parents('.x-select-item').text();
-	    alert(1);
         if (value != "") {
             $(this).addClass('select');
             $(this).siblings().removeClass('select');
