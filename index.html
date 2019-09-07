@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--[if lte IE 9]><script type="text/javascript">window.location="/error/notsupported";</script><![endif]-->
+    <title>个人信息</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge; chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/reset.css"> -->
+    <style type="text/css">
+        #content .x-external-form .form-content {
+            position: relative;
+            overflow: hidden;
+        }
+
+        #content .x-external-form .form-content .form-head .head-banner {
+            min-height: 1rem;
+        }
+
+        #content .x-external-form .form-content .form-head .head-banner .head-title {
+            padding: .8rem .55rem 0;
+            font-size: 20px;
+            word-break: break-all;
+            word-wrap: break-word;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            text-overflow: ellipsis;
+        }
+
+        #content .x-external-form .form-content .form-body .x-form {
+            width: 100%;
+            color: #1f2d3d;
+            padding: .25rem .55rem 2.5rem;
+        }
+
+        #content .x-external-form .form-content .form-body .x-form.relative {
+            padding-bottom: .25rem;
+        }
+
+        #content .x-external-form .form-content .form-body .x-form .f-line {
+            padding: .5rem 0;
+        }
+
+        #content .x-external-form .form-content .form-body .x-form .f-label {
+            line-height: 1.05rem;
+            font-size: .75rem;
+            padding-bottom: .25rem;
+            font-weight: 700;
+        }
+
+        #content .x-external-form .form-content .form-body .x-form .f-required {
+            padding-left: .25rem;
+            color: #f04134;
+        }
+
+        #content .x-external-form .form-content .form-body .x-form .x-combo {
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            border-radius: 2px;
+            border-bottom: solid 1px #e5e5e5;
+        }
+
+        #content .x-external-form .form-content .form-body .x-form .x-combo .x-picker-label {
+            border-bottom: none;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        #content .x-external-form .form-content .form-body .x-form .x-textarea>.text-area {
+            min-height: 8rem;
+            background: #fff;
+            color: #1f2d3d;
+            line-height: 1.05rem;
+            margin: 0;
+            outline: 0;
+            border: 1px solid #e5e5e5;
+            vertical-align: middle;
+            -webkit-user-modify: read-write-plaintext-only;
+            -webkit-user-select: auto;
+            -khtml-user-select: auto;
+            -moz-user-select: auto;
+            -ms-user-select: auto;
+            -o-user-select: auto;
+            user-select: auto;
+            word-break: break-all;
+            word-wrap: break-word;
+        }
+
+        body {
+            position: relative;
+            font-size: .75rem;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            position: relative;
+            font-size: .75rem;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body,
+        ol,
+        pre,
+        ul {
+            margin: 0;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        body,
+        textarea {
+            color: #1f2d3d;
+        }
+
+        body,
+        pre {
+            font-family: "Helvetica Neue", Helvetica, "PingFang SC", Roboto, "Noto Sans CJK SC", "Hiragino Sans GB", "Microsoft YaHei", 微软雅黑, Arial, sans-serif;
+            margin: 0px;
+        }
+
+        *,
+        :after,
+        :before {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: block;
+            margin: 8px;
+        }
+
+        html {
+            font-size: 15px;
+        }
+
+        html {
+            font-size: 20px;
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        html {
+            color: -internal-root-color;
+        }
+
+        *,
+        :after,
+        :before {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        *,
+        :after,
+        :before {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .x-form,
+        .x-form .f-line.has-top-border {
+            position: relative;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        .x-form .f-label:after,
+        .x-form .f-label:before {
+            content: " ";
+            display: table;
+            line-height: 0;
+        }
+
+        .fx-flow-filter .filter-btns:after,
+        .page-template .template .template-list-wrapper .template-line .line-label:after,
+        .x-fileupload.x-image-upload:after,
+        .x-filter .filter-relation:after,
+        .x-flowchartview .flow-view-legend .legend-group:after,
+        .x-form .f-label:after,
+        .x-form-data .widget-wrapper .widget-data-view .widget-data .select-list .select-item:after,
+        .x-message-data .widget-data-view .widget-data .select-list .select-item:after {
+            clear: both;
+        }
+
+        .x-number>input,
+        .x-text>input {
+            height: 2.2rem;
+        }
+
+        .x-number>input,
+        .x-text>input,
+        .x-textarea .text-area {
+            line-height: normal;
+            width: 100%;
+            background: #fff;
+            border-color: #e5e5e5;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            border-radius: 2px;
+            -webkit-transition: border-color;
+            -moz-transition: border-color;
+            -o-transition: border-color;
+            transition: border-color;
+            -webkit-transition-duration: .3s;
+            -moz-transition-duration: .3s;
+            -o-transition-duration: .3s;
+            transition-duration: .3s;
+            padding: .55rem .3rem;
+            white-space: pre-wrap;
+        }
+
+        button,
+        input,
+        textarea {
+            font-size: .75rem;
+            appearance: none;
+        }
+
+        input,
+        textarea {
+            color: #1f2d3d;
+            line-height: .75rem;
+            font-family: sans-serif;
+            margin: 0;
+            outline: 0;
+            border: 1px solid #e5e5e5;
+            vertical-align: middle;
+            padding: .15rem .3rem;
+        }
+
+        .x-i18n-phone select,
+        button,
+        input,
+        textarea {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            -ms-appearance: none;
+        }
+
+        .x-checkboxgroup,
+        .x-radiogroup {
+            line-height: 1.3rem;
+            border: 1px solid #e5e5e5;
+            background-color: #fff;
+        }
+
+        .x-checkboxgroup .group-item,
+        .x-radiogroup .group-item {
+            padding: .4rem;
+            border-bottom: 1px solid #e5e5e5;
+            word-break: break-all;
+            word-wrap: break-word;
+        }
+
+        .x-checkboxgroup .group-item .group-item-radio,
+        .x-radiogroup .group-item .group-item-radio {
+            margin-top: .1rem;
+            float: left;
+            height: 1rem;
+            width: 1rem;
+            border: 1px solid #c2c2c2;
+            -webkit-border-radius: 1rem;
+            -moz-border-radius: 1rem;
+            border-radius: 1rem;
+            -webkit-transition: background;
+            -moz-transition: background;
+            -o-transition: background;
+            transition: background;
+            -webkit-transition-duration: .3s;
+            -moz-transition-duration: .3s;
+            -o-transition-duration: .3s;
+            transition-duration: .3s;
+        }
+
+        .x-checkboxgroup .group-item .group-item-radio:after,
+        .x-radiogroup .group-item .group-item-radio:after {
+            content: '';
+            float: left;
+            height: .9rem;
+            width: .9rem;
+            background: #fff;
+            -webkit-border-radius: .9rem;
+            -moz-border-radius: .9rem;
+            border-radius: .9rem;
+            -webkit-transform: scale(.4);
+            -moz-transform: scale(.4);
+            -ms-transform: scale(.4);
+            -o-transform: scale(.4);
+            transform: scale(.4);
+        }
+
+        .x-checkboxgroup .group-item>span,
+        .x-radiogroup .group-item>span {
+            padding-left: .4rem;
+        }
+
+        .x-combo .x-picker-label,
+        .x-combocheck .x-picker-label,
+        .x-xcombo .x-picker-label,
+        .x-xcombocheck .x-picker-label {
+            position: relative;
+            font-size: .75rem;
+            padding: .3rem 1rem .3rem .4rem;
+            line-height: 1.3rem;
+        }
+
+        .x-picker-label {
+            background: #fff;
+            border: 1px solid #e5e5e5;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            border-radius: 2px;
+            font-size: .75rem;
+            line-height: 1.5rem;
+            padding: .3rem;
+            word-break: break-all;
+            word-wrap: break-word;
+            color:#706e6e;
+        }
+
+        .x-combo .x-picker-label:before,
+        .x-combocheck .x-picker-label:before,
+        .x-xcombo .x-picker-label:before,
+        .x-xcombocheck .x-picker-label:before {
+            content: '∧';
+            font-family: finex-m;
+            color: #c2c2c2;
+            position: absolute;
+            top: .4rem;
+            right: .4rem;
+        }
+
+        .x-combo .x-picker-label:empty:after,
+        .x-combocheck .x-picker-label:empty:after,
+        .x-xcombo .x-picker-label:empty:after,
+        .x-xcombocheck .x-picker-label:empty:after {
+            content: attr(data-watermark);
+            color: #91a1b7;
+            line-height: 1.5rem;
+        }
+
+        .x-form.relative .x-form-footer .nav-item:last-child {
+            padding-right: 0;
+        }
+
+        .x-form.relative .x-form-footer .nav-item:first-child {
+            padding-left: 0;
+        }
+
+        .x-btn-pane .nav-item {
+            position: relative;
+            float: left;
+            left: 0;
+            width: 100%;
+            padding: .25rem;
+        }
+
+        .x-btn-pane .nav-item>.x-btn {
+            display: block;
+            width: 100%;
+            height: 2rem;
+            line-height: 2rem;
+        }
+
+        .x-btn.style-blue {
+            color: #fff;
+            background: #248af9;
+        }
+
+        .x-btn {
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            border-radius: 2px;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            height: 2rem;
+            overflow: hidden;
+            text-align: center;
+            border: none;
+            margin: 0;
+            padding: 0;
+            outline: 0;
+            line-height: 2rem;
+            color: #248af9;
+            transition: background .5s;
+            background-color: #fff;
+        }
+
+        .x-btn,
+        .x-page {
+            position: relative;
+        }
+
+        .x-btn,
+        .x-parameter .parameter-btn-set {
+            -ms-user-select: none;
+            -o-user-select: none;
+        }
+
+        button,
+        input,
+        textarea {
+            font-size: .75rem;
+            appearance: none;
+        }
+
+        .x-checkboxgroup .select .group-item-checkbox,
+        .x-radiogroup .select .group-item-radio {
+            background: #248af9;
+            border: 1px solid #248af9;
+            -webkit-transition: background;
+            -moz-transition: background;
+            -o-transition: background;
+            transition: background;
+            -webkit-transition-duration: .3s;
+            -moz-transition-duration: .3s;
+            -o-transition-duration: .3s;
+            transition-duration: .3s;
+        }
+
+        element.style {
+            z-index: 8002;
+        }
+
+        .x-window-mask.dark-in {
+            background-color: rgba(0, 0, 0, .25);
+        }
+
+        .x-window-mask {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-color: transparent;
+            z-index: 999;
+            overflow: hidden;
+            -webkit-transition: background-color opacity;
+            -moz-transition: background-color opacity;
+            -o-transition: background-color opacity;
+            transition: background-color opacity;
+            -webkit-transition-duration: .3s;
+            -moz-transition-duration: .3s;
+            -o-transition-duration: .3s;
+            transition-duration: .3s;
+        }
+
+        .x-slide-panel.modal-in {
+            -webkit-transform: translate3d(0, 0, 0);
+            -moz-transform: translate3d(0, 0, 0);
+            -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+
+        .x-slide-panel.form-right {
+            -webkit-transform: translate3d(100%, 0, 0);
+            -moz-transform: translate3d(100%, 0, 0);
+            -o-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0);
+        }
+
+        .x-slide-panel {
+            position: fixed;
+            top: 0;
+            width: 80%;
+            height: 100%;
+            background: #f5f7fa;
+            z-index: 1000;
+            -webkit-transition: transform;
+            -moz-transition: transform;
+            -o-transition: transform;
+            transition: transform;
+            -webkit-transition-duration: .3s;
+            -moz-transition-duration: .3s;
+            -o-transition-duration: .3s;
+            transition-duration: .3s;
+        }
+
+        .x-slide-panel,
+        .x-slide-panel .content {
+            bottom: 0;
+            overflow-x: hidden;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            right: 0;
+        }
+
+        .x-combo-picker .combo-search-header {
+            padding: .5rem;
+        }
+
+        .x-slide-panel .content.has-header {
+            top: 2.5rem;
+        }
+
+        .x-slide-panel .content {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .x-slide-panel,
+        .x-slide-panel .content {
+            bottom: 0;
+            overflow-x: hidden;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            right: 0;
+        }
+
+        .x-select-item {
+            background: #fff;
+            position: relative;
+            padding: .55rem .55rem .55rem 1.8rem;
+        }
+
+        .x-combo-picker .combo-list .x-select-item:first-child:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: #e5e5e5;
+        }
+
+        .x-select-item .item-checkbox {
+            position: absolute;
+            top: .7rem;
+            left: .6rem;
+            width: .7rem;
+            height: .7rem;
+            border: 1px solid #c2c2c2;
+            background: #fff;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            -webkit-transition: all 218ms;
+            -moz-transition: all 218ms;
+            -o-transition: all 218ms;
+            transition: all 218ms;
+        }
+
+        .x-select-item .item-checkbox:after {
+            content: '';
+            position: relative;
+            float: left;
+            left: 0;
+            border-left: 1px solid #fff;
+            border-bottom: 1px solid #fff;
+            height: .2rem;
+            width: .4rem;
+            -webkit-transform: rotate(315deg);
+            -moz-transform: rotate(315deg);
+            -ms-transform: rotate(315deg);
+            -o-transform: rotate(315deg);
+            transform: rotate(315deg);
+            margin-top: .15rem;
+            margin-left: .1rem;
+        }
+
+        .x-combo-picker .combo-list .x-select-item .item-text {
+            color: #1f2d3d;
+        }
+
+        .x-select-item .item-text {
+            color: #5e6d82;
+            font-size: .7rem;
+            line-height: 1rem;
+            min-height: 1rem;
+            word-break: break-all;
+            word-wrap: break-word;
+        }
+
+        .x-select-item:after {
+            content: '';
+            background: #e5e5e5;
+            position: absolute;
+            bottom: 0;
+            left: .6rem;
+            right: 0;
+            height: 1px;
+        }
+
+        .x-select-item.active .item-checkbox,
+        .x-select-item.select .item-checkbox {
+            background: #248af9;
+            border: 1px solid #248af9;
+        }
+        .x-combo .x-picker-label, .x-combocheck .x-picker-label, .x-xcombo .x-picker-label, .x-xcombocheck .x-picker-label {
+    position: relative;
+    font-size: .75rem;
+    padding: .3rem 1rem .3rem .4rem;
+    line-height: 1.3rem;
+}
+.x-combo .x-picker-label .combo-select-result.select-single, .x-combocheck .x-picker-label .combo-select-result.select-single, .x-xcombo .x-picker-label .combo-select-result.select-single, .x-xcombocheck .x-picker-label .combo-select-result.select-single {
+    background: #84cf61;
+}
+.x-combo .x-picker-label .combo-select-result, .x-combocheck .x-picker-label .combo-select-result, .x-xcombo .x-picker-label .combo-select-result, .x-xcombocheck .x-picker-label .combo-select-result {
+    display: inline-block;
+    padding: 0 .4rem;
+    margin: .1rem .25rem .1rem 0;
+    background: #42a5f5;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    color: #fff;
+}
+    </style>
+</head>
+
+<body>
+    <div id="content">
+        <div class="x-external-form" wn="_widget_1567756511301">
+            <div class="form-content">
+                <div class="form-head">
+                    <div class="head-banner" style="background-color: transparent;"><img
+                            src="https://assets.jiandaoyun.com/v2133/resources/images/theme/form/bn_18.jpg"></div>
+                    <div class="head-title"
+                        style="color: rgb(49, 49, 49); font-size: 20px; text-align: center; font-style: normal; font-weight: bold;">
+                        科技创新协会报名表</div>
+                </div>
+                <div class="form-body">
+                    <div class="x-form relative" wn="_widget_1567756511302">
+                        <div class="widget-wrapper">
+                            <ul style="padding-left: 0;">
+                                <li class="f-line" wn="_widget_1567782776927">
+                                    <div class="f-label"><span class="f-title">姓名</span><span
+                                            class="f-required">*</span></div>
+                                    <div class="f-widget">
+                                        <div class="x-text" wn="_widget_1564650205452"><input type="text"
+                                                placeholder="请输入姓名" name="username" maxlength="15"></div>
+                                    </div>
+                                </li>
+                                <li class="f-line" wn="_widget_1567782776928">
+                                    <div class="f-label"><span class="f-title">学院</span><span
+                                            class="f-required">*</span></div>
+                                    <div class="f-widget">
+                                        <div class="x-text" wn="_widget_1564651144695"><input type="text"
+                                                placeholder="请输入所在学院的全称，如信息工程学院" name="college" maxlength="15"></div>
+                                    </div>
+                                </li>
+                                <li class="f-line" wn="_widget_1567782776929">
+                                    <div class="f-label"><span class="f-title">宿舍</span><span
+                                            class="f-required">*</span></div>
+                                    <div class="f-widget">
+                                        <div class="x-text" wn="_widget_1564651144392"><input type="text"
+                                                placeholder="格式：如西四111" name="dormitory" maxlength="15"></div>
+                                    </div>
+                                </li>
+                                <li class="f-line" wn="_widget_1567782776930">
+                                    <div class="f-label"><span class="f-title">性别</span><span
+                                            class="f-required">*</span></div>
+                                    <div class="f-widget">
+                                        <div class="x-radiogroup" wn="_widget_1564652511564">
+                                            <div class="group-item" option="男">
+                                                <div class="group-item-radio "></div><span>男</span>
+                                            </div>
+                                            <div class="group-item" option="女">
+                                                <div class="group-item-radio"></div><span>女</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="f-line" wn="_widget_1567782776931">
+                                    <div class="f-label"><span class="f-title">手机号</span><span
+                                            class="f-required">*</span></div>
+                                    <div class="f-widget">
+                                        <div class="x-text" wn="_widget_1564651145472"><input type="number"
+                                                placeholder="请输入正确的手机号" name="number" id="Number"><span id="NumberSpan" class="numberSpan formSpan"></span></div>
+                                    </div>
+                                </li>
+                                <li class="f-line" wn="_widget_1567782776932">
+                                    <div class="f-label"><span class="f-title">WeChat</span><span
+                                            class="f-required">*</span></div>
+
+                                    <div class="f-widget">
+                                        <div class="x-text" wn="_widget_1564651145626"><input type="text"
+                                                placeholder="请填写微信号" name="WeChat" maxlength="20"></div>
+                                    </div>
+                                </li>
+                                <li class="f-line" wn="_widget_1567782776933">
+                                    <div class="f-label"><span class="f-title">QQ</span><span
+                                            class="f-required">*</span></div>
+
+                                    <div class="f-widget">
+                                        <div class="x-text" wn="_widget_1567755654802"><input type="number"
+                                                placeholder="请填写QQ号码" name="QQ" maxlength="15"></div>
+                                    </div>
+                                </li>
+                                <li class="f-line fui_combo" wn="_widget_1567782776934">
+                                    <div class="f-label"><span class="f-title">第一意向部门</span><span
+                                            class="f-required">*</span></div>
+                                    <div class="f-widget">
+                                        <div class="x-combo" wn="_widget_1567755654843">
+                                            <div class="x-picker-label result" data-watermark="请选择内容"><span>请选择一个部门</span></div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="f-line" wn="_widget_1567782776935">
+                                    <div class="f-label"><span class="f-title">其他意向部门（多选）</span></div>
+                                    <div class="f-widget">
+                                        <div class="x-text" wn="_widget_1567781194476"><input type="text"
+                                                placeholder="学术部，秘书部，宣传部，科技活动部，竞赛管理部，培训部" name="others" maxlength="15"></div>
+                                    </div>
+                                </li>
+                                <li class="f-line" wn="_widget_1567782776936">
+                                    <div class="f-label"><span class="f-title">自我介绍</span><span
+                                            class="f-required">*</span></div>
+                                    <div class="f-widget">
+                                        <div class="x-textarea" wn="_widget_1567781194526">
+                                            <div class="text-area" contenteditable="true" data-watermark="请输入文本内容"
+                                                placeholder="不要超过1000字" data-name="introduction" maxlength="1000"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="x-form-footer x-btn-pane col-1">
+                                <div class="nav-item"><button class="x-btn style-blue submit" role="submit"
+                                        style="background-color: rgb(49, 49, 49);">提交</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="x-window-mask dark-in" style="z-index: 8002;display: none;"></div>
+    <div class="x-slide-panel x-combo-picker form-right modal-in" wn="_widget_1567756511315"
+        style="z-index: 8005;left: -200px;display: none;">
+        <div class="content has-header">
+            <div class="combo-list">
+                <div class="x-select-item">
+                    <div class="item-checkbox"></div>
+                    <div class="item-text">学术部</div>
+                </div>
+                <div class="x-select-item">
+                    <div class="item-checkbox"></div>
+                    <div class="item-text">秘书部</div>
+                </div>
+                <div class="x-select-item">
+                    <div class="item-checkbox"></div>
+                    <div class="item-text">培训部</div>
+                </div>
+                <div class="x-select-item">
+                    <div class="item-checkbox"></div>
+                    <div class="item-text">宣传部</div>
+                </div>
+                <div class="x-select-item">
+                    <div class="item-checkbox"></div>
+                    <div class="item-text">竞赛管理部</div>
+                </div>
+                <div class="x-select-item">
+                    <div class="item-checkbox"></div>
+                    <div class="item-text">科技活动部</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./lib/jquery-1.12.4.js"></script>
+    <script src="./dist/form.js"></script>
+</body>
+
+</html>
